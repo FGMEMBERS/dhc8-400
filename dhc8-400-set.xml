@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+de Havilland DHC8-400Q
+Jan 2009 Alex Park
+FDM based on Alex Park Dash 8 300Q adapted for the Dash8 - 400Q
+************************************************************************
+-->
+
+<PropertyList include="dhc8-400-base.xml">
+    <sim>
+        <description>DHC8-400Q</description>
+        <status>Alpha development</status>
+        <author>Alex Park(Maverickalex)</author>
+        <flight-model>yasim</flight-model>
+        <aero>dhc8-400</aero>
+        <fuel-fraction>0.5</fuel-fraction>
+        <startup>
+            <splash-texture>Aircraft/dhc8-400/Splash.png</splash-texture>
+        </startup>
+
+    <model>
+<path>Aircraft/dhc8-400/models/dhc8-400Q.xml</path>
+<livery> 
+<file type="string"/> 
+</livery> 
+<open-cabin-doors type="bool">1</open-cabin-doors>
+</model>
+
+    <menubar>
+        <default>
+            <menu n="10">
+                <label>DHC8-400</label>
+                <enabled type="bool">true</enabled>
+                <item>
+                    <label>Autostart</label>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>sim/model/start-idling</property>
+                    </binding>
+                </item>
+                <item>
+                    <label>Cabin Doors(open/close)</label>
+                    <binding>
+                        <command>property-toggle</command>
+		<property>controls/doors/cabin-door-pos-norm</property>
+                    </binding>
+                </item>
+                   
+			<item>
+                    <label>Select Livery</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>aircraft.livery.dialog.toggle()</script>
+                    </binding>
+                </item>
+            </menu>
+        </default>
+    </menubar>
+
+</sim>
+
+<input>
+ <keyboard>
+  <key n="127">
+   <name>Delete</name>
+   <desc>Toggle Reversers</desc>
+   <binding>
+    <command>property-toggle</command>
+    <property>controls/engines/engine[0]/reverser</property>
+   </binding>
+   <binding>
+    <command>property-toggle</command>
+    <property>controls/engines/engine[1]/reverser</property>
+   </binding>
+  </key>
+ </keyboard>
+</input>
+
+
+<controls>
+        <gear>
+            <brake-parking>1</brake-parking>
+        </gear>
+</controls>
+
+<input>
+ <keyboard> 
+<key n="119"> 
+<name>w</name> 
+<desc>Walk forward toward view</desc>
+ <repeatable>true</repeatable>
+ <binding>
+ <command>nasal</command> 
+<script>walk.walk_about(0.1)</script> 
+</binding> 
+</key> 
+<key n="87"> 
+<name>W</name>
+ <desc>Walk backward from view</desc> 
+<repeatable>true</repeatable> 
+<binding>
+ <command>nasal</command>
+ <script>walk.walk_about(-0.1)</script> 
+</binding> 
+</key>
+ </keyboard>
+ </input> 
+
+
+    <nasal>
+        <dhc8-400>
+            <file>Aircraft/dhc8-400/Nasal/Electrical.nas</file>
+            <file>Aircraft/dhc8-400/Nasal/systems.nas</file>
+            <file>Aircraft/dhc8-400/Nasal/vhf22.nas</file>
+            <file>Aircraft/dhc8-400/Nasal/vir32.nas</file>
+		<file>Aircraft/dhc8-400/Nasal/reverse-thrust.nas</file>
+		<file>Aircraft/dhc8-400/Nasal/walk.nas</file>
+		<file>Aircraft/dhc8-400/Nasal/copilot-dual-control.nas</file>
+		<file>Aircraft/dhc8-400/Nasal/dhc8-400-dual-control.nas</file>
+		<file>Aircraft/dhc8-400/Nasal/dual-control-tools.nas</file>
+		<file>Aircraft/dhc8-400/Nasal/hydralic-pressure.nas</file>
+		<file>Aircraft/dhc8-400/Nasal/lighting.nas</file>
+        </dhc8-400>
+    </nasal>
+
+ 
+ 
+</PropertyList>
