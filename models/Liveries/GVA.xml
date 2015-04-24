@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Global Air</name>
+            <texture>GVA84.png</texture>
+		<texture>8400-E.png</texture>
+        </livery>
+    </model>
+</sim>
+</PropertyList>

@@ -116,13 +116,16 @@ FDM based on Alex Park Dash 8 300Q adapted for the Dash8 - 400Q
             <file>Aircraft/dhc8-400/Nasal/vir32.nas</file>
 		<file>Aircraft/dhc8-400/Nasal/reverse-thrust.nas</file>
 		<file>Aircraft/dhc8-400/Nasal/walk.nas</file>
-		<file>Aircraft/dhc8-400/Nasal/copilot-dual-control.nas</file>
-		<file>Aircraft/dhc8-400/Nasal/dhc8-400-dual-control.nas</file>
-		<file>Aircraft/dhc8-400/Nasal/dual-control-tools.nas</file>
+<!--		<file>Aircraft/dhc8-400/Nasal/copilot-dual-control.nas</file> 
+		<file>Aircraft/dhc8-400/Nasal/dhc8-400-dual-control.nas</file> 
+		<file>Aircraft/dhc8-400/Nasal/dual-control-tools.nas</file> -->
 		<file>Aircraft/dhc8-400/Nasal/hydralic-pressure.nas</file>
 		<file>Aircraft/dhc8-400/Nasal/lighting.nas</file>
         </dhc8-400>
-    </nasal>
+		<popway>
+			<file>Aircraft/dhc8-400/Nasal/popway.nas</file>
+		</popway>
+	</nasal>
 
  
  

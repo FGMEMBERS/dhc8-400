@@ -3374,7 +3374,7 @@ kids 0
 OBJECT poly
 name "adf2-brg-flat-switch"
 loc -10.945 2.03596 -0.0477497
-texture "E:/NewFGCVS/data/Aircraft/dhc8-400/models/panels/efis/efis.png"
+texture "efis.png"
 crease 45.000000
 numvert 151
 0 -0.00172973 -0.00604675

@@ -190,7 +190,7 @@ setlistener("/sim/signals/fdm-initialized", func {
     setprop("/instrumentation/clock/flight-meter-hour",0);
     setprop("controls/gear/water-rudder-down",0);
     setprop("controls/gear/water-rudder-pos",0);
-    setprop(,0);
+ #   setprop(,0);
     print("system  ...Check");
     setprop("controls/engines/engine/condition",0);
     setprop("controls/engines/engine/condition",0);
